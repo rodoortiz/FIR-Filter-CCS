@@ -1,7 +1,7 @@
 ******************************************************************************
-             TMS320C2000 Linker Unix v18.12.4                  
+             TMS320C2000 Linker Unix v20.2.0                   
 ******************************************************************************
->> Linked Sat May  9 15:25:07 2020
+>> Linked Sat May  9 20:31:50 2020
 
 OUTPUT FILE NAME:   <FIR_16bit_fixed.out>
 ENTRY POINT SYMBOL: "_c_int00"  address: 0000807c
@@ -13,7 +13,7 @@ MEMORY CONFIGURATION
 ----------------------  --------  ---------  --------  --------  ----  --------
 PAGE 0:
   RAMM0                 00000122   000002de  00000000  000002de  RWIX
-  RAMLS0                00008000   00000800  000001ab  00000655  RWIX
+  RAMLS0                00008000   00000800  000001a4  0000065c  RWIX
   RAMLS1                00008800   00000800  00000000  00000800  RWIX
   RAMLS2                00009000   00000800  00000000  00000800  RWIX
   RAMLS3                00009800   00000800  00000000  00000800  RWIX
@@ -85,17 +85,17 @@ GETWRITEIDX
 PUTREADIDX 
 *          0    0003f800    00000000     DSECT
 
-.text      0    00008000    000001ab     
+.text      0    00008000    000001a4     
                   00008000    0000007c     fir_a.obj (.text)
                   0000807c    00000056     rts2800_fpu32.lib : boot28.asm.obj (.text)
                   000080d2    0000004a     fir_c.obj (.text)
                   0000811c    00000029     rts2800_fpu32.lib : exit.c.obj (.text)
                   00008145    00000024                       : cpy_tbl.c.obj (.text)
                   00008169    0000001d                       : memcpy.c.obj (.text)
-                  00008186    00000019                       : args_main.c.obj (.text)
-                  0000819f    00000009                       : _lock.c.obj (.text)
-                  000081a8    00000002                       : pre_init.c.obj (.text)
-                  000081aa    00000001                       : startup.c.obj (.text)
+                  00008186    00000012                       : args_main.c.obj (.text)
+                  00008198    00000009                       : _lock.c.obj (.text)
+                  000081a1    00000002                       : pre_init.c.obj (.text)
+                  000081a3    00000001                       : startup.c.obj (.text)
 
 .ebss.1    1    0000a800    00000070     UNINITIALIZED
                   0000a800    00000065     fir_c.obj (.ebss:_hbp1)
@@ -129,21 +129,21 @@ MODULE SUMMARY
     +--+-----------------+------+------------------+--------------------+
        Total:            198    24                 62624             
                                                                      
-    /home/rodoortiz/ti/ccs930/ccs/tools/compiler/ti-cgt-c2000_18.12.4.LTS/lib/rts2800_fpu32.lib
+    /Applications/ti/ccs1000/ccs/tools/compiler/ti-cgt-c2000_20.2.0.LTS/lib/rts2800_fpu32.lib
        boot28.asm.obj    86     0                  0                 
        exit.c.obj        41     14                 6                 
        cpy_tbl.c.obj     36     0                  0                 
        memcpy.c.obj      29     0                  0                 
-       args_main.c.obj   25     0                  0                 
        _lock.c.obj       9      10                 4                 
+       args_main.c.obj   18     0                  0                 
        pre_init.c.obj    2      0                  0                 
        startup.c.obj     1      0                  0                 
     +--+-----------------+------+------------------+--------------------+
-       Total:            229    24                 10                
+       Total:            222    24                 10                
                                                                      
        Stack:            0      0                  512               
     +--+-----------------+------+------------------+--------------------+
-       Grand Total:      427    48                 63146             
+       Grand Total:      420    48                 63146             
 
 
 GLOBAL DATA SYMBOLS: SORTED BY DATA PAGE
@@ -202,12 +202,12 @@ abs   ffffffff  ___pinit__
 abs   ffffffff  ___text__                       
 0     00008186  __args_main                     
 1     0000a86c  __lock                          
-0     000081a7  __nop                           
-0     000081a3  __register_lock                 
-0     0000819f  __register_unlock               
+0     000081a0  __nop                           
+0     0000819c  __register_lock                 
+0     00008198  __register_unlock               
 1     00000400  __stack                         
-0     000081aa  __system_post_cinit             
-0     000081a8  __system_pre_init               
+0     000081a3  __system_post_cinit             
+0     000081a1  __system_pre_init               
 1     0000a86e  __unlock                        
 0     0000811c  _abort                          
 0     00008078  _backPointer                    
@@ -248,11 +248,11 @@ page  address   name
 0     00008145  _copy_in                        
 0     00008169  _memcpy                         
 0     00008186  __args_main                     
-0     0000819f  __register_unlock               
-0     000081a3  __register_lock                 
-0     000081a7  __nop                           
-0     000081a8  __system_pre_init               
-0     000081aa  __system_post_cinit             
+0     00008198  __register_unlock               
+0     0000819c  __register_lock                 
+0     000081a0  __nop                           
+0     000081a1  __system_pre_init               
+0     000081a3  __system_post_cinit             
 0     00082000  ___cinit__                      
 0     00082000  cinit                           
 1     00000400  __stack                         
