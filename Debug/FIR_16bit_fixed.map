@@ -1,0 +1,291 @@
+******************************************************************************
+             TMS320C2000 Linker Unix v18.12.4                  
+******************************************************************************
+>> Linked Sat May  9 15:25:07 2020
+
+OUTPUT FILE NAME:   <FIR_16bit_fixed.out>
+ENTRY POINT SYMBOL: "_c_int00"  address: 0000807c
+
+
+MEMORY CONFIGURATION
+
+         name            origin    length      used     unused   attr    fill
+----------------------  --------  ---------  --------  --------  ----  --------
+PAGE 0:
+  RAMM0                 00000122   000002de  00000000  000002de  RWIX
+  RAMLS0                00008000   00000800  000001ab  00000655  RWIX
+  RAMLS1                00008800   00000800  00000000  00000800  RWIX
+  RAMLS2                00009000   00000800  00000000  00000800  RWIX
+  RAMLS3                00009800   00000800  00000000  00000800  RWIX
+  RAMLS4                0000a000   00000800  00000000  00000800  RWIX
+  RAMD0                 0000b000   00000800  00000000  00000800  RWIX
+  BEGIN                 00080000   00000002  00000000  00000002  RWIX
+  FLASHA                00080002   00001ffe  00000000  00001ffe  RWIX
+  FLASHB                00082000   00002000  00000032  00001fce  RWIX
+  FLASHC                00084000   00002000  00000000  00002000  RWIX
+  FLASHD                00086000   00002000  00000000  00002000  RWIX
+  FLASHE                00088000   00008000  00000000  00008000  RWIX
+  FLASHF                00090000   00008000  00000000  00008000  RWIX
+  FLASHG                00098000   00008000  00000000  00008000  RWIX
+  FLASHH                000a0000   00008000  00000000  00008000  RWIX
+  FLASHI                000a8000   00008000  00000000  00008000  RWIX
+  FLASHJ                000b0000   00008000  00000000  00008000  RWIX
+  FLASHK                000b8000   00002000  00000000  00002000  RWIX
+  FLASHL                000ba000   00002000  00000000  00002000  RWIX
+  FLASHM                000bc000   00002000  00000000  00002000  RWIX
+  FLASHN                000be000   00002000  00000000  00002000  RWIX
+  RESET                 003fffc0   00000002  00000000  00000002  RWIX
+
+PAGE 1:
+  BOOT_RSVD             00000002   00000120  00000000  00000120  RWIX
+  RAMM1                 00000400   00000400  00000200  00000200  RWIX
+  RAMLS5                0000a800   00000800  0000019f  00000661  RWIX
+  RAMD1                 0000b800   00000800  00000000  00000800  RWIX
+  RAMGS0                0000c000   00010000  0000f30c  00000cf4  RWIX
+  CPU2TOCPU1RAM         0003f800   00000400  00000000  00000400  RWIX
+  CPU1TOCPU2RAM         0003fc00   00000400  00000000  00000400  RWIX
+
+
+SECTION ALLOCATION MAP
+
+ output                                  attributes/
+section   page    origin      length       input sections
+--------  ----  ----------  ----------   ----------------
+.cinit     0    00082000    00000032     
+                  00082000    0000000e     rts2800_fpu32.lib : exit.c.obj (.cinit)
+                  0008200e    00000005                       : _lock.c.obj (.cinit:__lock)
+                  00082013    00000005                       : _lock.c.obj (.cinit:__unlock)
+                  00082018    00000004     fir_c.obj (.cinit:_hbp1)
+                  0008201c    00000004     fir_c.obj (.cinit:_hbp2)
+                  00082020    00000004     fir_c.obj (.cinit:_hhp)
+                  00082024    00000004     fir_c.obj (.cinit:_hlp)
+                  00082028    00000004     fir_c.obj (.cinit:_xn)
+                  0008202c    00000004     fir_c.obj (.cinit:_ynFir)
+                  00082030    00000002     --HOLE-- [fill = 0]
+
+.pinit     0    00082000    00000000     UNINITIALIZED
+
+.TI.ramfunc 
+*          0    00008000    00000000     UNINITIALIZED
+
+.stack     1    00000400    00000200     UNINITIALIZED
+                  00000400    00000200     --HOLE--
+
+.data      1    0000c000    00000000     UNINITIALIZED
+
+.reset     0    003fffc0    00000002     DSECT
+                  003fffc0    00000002     rts2800_fpu32.lib : boot28.asm.obj (.reset)
+
+GETBUFFER 
+*          0    0003f800    00000000     DSECT
+
+GETWRITEIDX 
+*          0    0003f800    00000000     DSECT
+
+PUTREADIDX 
+*          0    0003f800    00000000     DSECT
+
+.text      0    00008000    000001ab     
+                  00008000    0000007c     fir_a.obj (.text)
+                  0000807c    00000056     rts2800_fpu32.lib : boot28.asm.obj (.text)
+                  000080d2    0000004a     fir_c.obj (.text)
+                  0000811c    00000029     rts2800_fpu32.lib : exit.c.obj (.text)
+                  00008145    00000024                       : cpy_tbl.c.obj (.text)
+                  00008169    0000001d                       : memcpy.c.obj (.text)
+                  00008186    00000019                       : args_main.c.obj (.text)
+                  0000819f    00000009                       : _lock.c.obj (.text)
+                  000081a8    00000002                       : pre_init.c.obj (.text)
+                  000081aa    00000001                       : startup.c.obj (.text)
+
+.ebss.1    1    0000a800    00000070     UNINITIALIZED
+                  0000a800    00000065     fir_c.obj (.ebss:_hbp1)
+                  0000a865    00000001     --HOLE--
+                  0000a866    00000006     rts2800_fpu32.lib : exit.c.obj (.ebss)
+                  0000a86c    00000002                       : _lock.c.obj (.ebss:__lock)
+                  0000a86e    00000002                       : _lock.c.obj (.ebss:__unlock)
+
+.ebss.2    1    0000a880    00000065     UNINITIALIZED
+                  0000a880    00000065     fir_c.obj (.ebss:_hbp2)
+
+.ebss.3    1    0000a900    00000065     UNINITIALIZED
+                  0000a900    00000065     fir_c.obj (.ebss:_hhp)
+
+.ebss.4    1    0000a980    00000065     UNINITIALIZED
+                  0000a980    00000065     fir_c.obj (.ebss:_hlp)
+
+.ebss.5    1    0000c000    00007986     UNINITIALIZED
+                  0000c000    00007986     fir_c.obj (.ebss:_xn)
+
+.ebss.6    1    000139c0    00007986     UNINITIALIZED
+                  000139c0    00007986     fir_c.obj (.ebss:_ynFir)
+
+MODULE SUMMARY
+
+       Module            code   initialized data   uninitialized data
+       ------            ----   ----------------   ------------------
+    ./
+       fir_c.obj         74     24                 62624             
+       fir_a.obj         124    0                  0                 
+    +--+-----------------+------+------------------+--------------------+
+       Total:            198    24                 62624             
+                                                                     
+    /home/rodoortiz/ti/ccs930/ccs/tools/compiler/ti-cgt-c2000_18.12.4.LTS/lib/rts2800_fpu32.lib
+       boot28.asm.obj    86     0                  0                 
+       exit.c.obj        41     14                 6                 
+       cpy_tbl.c.obj     36     0                  0                 
+       memcpy.c.obj      29     0                  0                 
+       args_main.c.obj   25     0                  0                 
+       _lock.c.obj       9      10                 4                 
+       pre_init.c.obj    2      0                  0                 
+       startup.c.obj     1      0                  0                 
+    +--+-----------------+------+------------------+--------------------+
+       Total:            229    24                 10                
+                                                                     
+       Stack:            0      0                  512               
+    +--+-----------------+------+------------------+--------------------+
+       Grand Total:      427    48                 63146             
+
+
+GLOBAL DATA SYMBOLS: SORTED BY DATA PAGE
+
+address     data page           name
+--------    ----------------    ----
+00000400      10 (00000400)     __stack
+
+0000a800     2a0 (0000a800)     _hbp1
+
+0000a866     2a1 (0000a840)     ___TI_enable_exit_profile_output
+0000a868     2a1 (0000a840)     ___TI_cleanup_ptr
+0000a86a     2a1 (0000a840)     ___TI_dtors_ptr
+0000a86c     2a1 (0000a840)     __lock
+0000a86e     2a1 (0000a840)     __unlock
+
+0000a880     2a2 (0000a880)     _hbp2
+
+0000a900     2a4 (0000a900)     _hhp
+
+0000a980     2a6 (0000a980)     _hlp
+
+0000c000     300 (0000c000)     _xn
+
+000139c0     4e7 (000139c0)     _ynFir
+
+
+GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
+
+page  address   name                            
+----  -------   ----                            
+1     0000c000  .data                           
+abs   ffffffff  .text                           
+0     0000811c  C$$EXIT                         
+0     00008000  _RamfuncsLoadEnd                
+abs   00000000  _RamfuncsLoadSize               
+0     00008000  _RamfuncsLoadStart              
+0     00008000  _RamfuncsRunEnd                 
+abs   00000000  _RamfuncsRunSize                
+0     00008000  _RamfuncsRunStart               
+1     00000600  __STACK_END                     
+abs   00000200  __STACK_SIZE                    
+1     0000a868  ___TI_cleanup_ptr               
+1     0000a86a  ___TI_dtors_ptr                 
+1     0000a866  ___TI_enable_exit_profile_output
+abs   ffffffff  ___TI_pprof_out_hndl            
+abs   ffffffff  ___TI_prof_data_size            
+abs   ffffffff  ___TI_prof_data_start           
+abs   ffffffff  ___binit__                      
+abs   ffffffff  ___c_args__                     
+0     00082000  ___cinit__                      
+1     0000c000  ___data__                       
+1     0000c000  ___edata__                      
+abs   ffffffff  ___etext__                      
+abs   ffffffff  ___pinit__                      
+abs   ffffffff  ___text__                       
+0     00008186  __args_main                     
+1     0000a86c  __lock                          
+0     000081a7  __nop                           
+0     000081a3  __register_lock                 
+0     0000819f  __register_unlock               
+1     00000400  __stack                         
+0     000081aa  __system_post_cinit             
+0     000081a8  __system_pre_init               
+1     0000a86e  __unlock                        
+0     0000811c  _abort                          
+0     00008078  _backPointer                    
+0     0000807c  _c_int00                        
+0     00008145  _copy_in                        
+0     0000811e  _exit                           
+0     0000806a  _firFilter                      
+1     0000a800  _hbp1                           
+1     0000a880  _hbp2                           
+1     0000a900  _hhp                            
+1     0000a980  _hlp                            
+0     000080d2  _main                           
+0     00008169  _memcpy                         
+1     0000c000  _xn                             
+1     000139c0  _ynFir                          
+abs   ffffffff  binit                           
+0     00082000  cinit                           
+1     0000c000  edata                           
+abs   ffffffff  etext                           
+abs   ffffffff  pinit                           
+
+
+GLOBAL SYMBOLS: SORTED BY Symbol Address 
+
+page  address   name                            
+----  -------   ----                            
+0     00008000  _RamfuncsLoadEnd                
+0     00008000  _RamfuncsLoadStart              
+0     00008000  _RamfuncsRunEnd                 
+0     00008000  _RamfuncsRunStart               
+0     0000806a  _firFilter                      
+0     00008078  _backPointer                    
+0     0000807c  _c_int00                        
+0     000080d2  _main                           
+0     0000811c  C$$EXIT                         
+0     0000811c  _abort                          
+0     0000811e  _exit                           
+0     00008145  _copy_in                        
+0     00008169  _memcpy                         
+0     00008186  __args_main                     
+0     0000819f  __register_unlock               
+0     000081a3  __register_lock                 
+0     000081a7  __nop                           
+0     000081a8  __system_pre_init               
+0     000081aa  __system_post_cinit             
+0     00082000  ___cinit__                      
+0     00082000  cinit                           
+1     00000400  __stack                         
+1     00000600  __STACK_END                     
+1     0000a800  _hbp1                           
+1     0000a866  ___TI_enable_exit_profile_output
+1     0000a868  ___TI_cleanup_ptr               
+1     0000a86a  ___TI_dtors_ptr                 
+1     0000a86c  __lock                          
+1     0000a86e  __unlock                        
+1     0000a880  _hbp2                           
+1     0000a900  _hhp                            
+1     0000a980  _hlp                            
+1     0000c000  .data                           
+1     0000c000  ___data__                       
+1     0000c000  ___edata__                      
+1     0000c000  _xn                             
+1     0000c000  edata                           
+1     000139c0  _ynFir                          
+abs   00000000  _RamfuncsLoadSize               
+abs   00000000  _RamfuncsRunSize                
+abs   00000200  __STACK_SIZE                    
+abs   ffffffff  .text                           
+abs   ffffffff  ___TI_pprof_out_hndl            
+abs   ffffffff  ___TI_prof_data_size            
+abs   ffffffff  ___TI_prof_data_start           
+abs   ffffffff  ___binit__                      
+abs   ffffffff  ___c_args__                     
+abs   ffffffff  ___etext__                      
+abs   ffffffff  ___pinit__                      
+abs   ffffffff  ___text__                       
+abs   ffffffff  binit                           
+abs   ffffffff  etext                           
+abs   ffffffff  pinit                           
+
+[53 symbols]

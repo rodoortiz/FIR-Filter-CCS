@@ -1,0 +1,1 @@
+"./fir_a.obj" "./fir_c.obj" "../Mi_2837x_FLASH_lnk_cpu1.cmd" -llibc.a 
