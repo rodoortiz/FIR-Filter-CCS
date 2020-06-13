@@ -4,6 +4,7 @@
 
 Nw 		.set 101 ;Tamaño del buffer (No. coeficientes)
 xb 		.space 16*Nw ;Buffer para datos de entrada (16 bits)
+xbf		.long 0
 
 _firFilter
 		SETC SXM

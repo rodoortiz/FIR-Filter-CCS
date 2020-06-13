@@ -2,7 +2,7 @@
 # Automatically-generated file. Do not edit!
 ################################################################################
 
-CG_TOOL_ROOT := /Applications/ti/ccs1000/ccs/tools/compiler/ti-cgt-c2000_20.2.0.LTS
+CG_TOOL_ROOT := /home/rodoortiz/ti/ccs930/ccs/tools/compiler/ti-cgt-c2000_18.12.4.LTS
 
 GEN_OPTS__FLAG := 
 GEN_CMDS__FLAG := 
@@ -139,14 +139,14 @@ all: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
 FIR_16bit_fixed.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
 	@echo 'Building target: "$@"'
 	@echo 'Invoking: C2000 Linker'
-	"/Applications/ti/ccs1000/ccs/tools/compiler/ti-cgt-c2000_20.2.0.LTS/bin/cl2000" -v28 -ml -mt --cla_support=cla1 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu2 --opt_for_speed=5 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=coffabi -z -m"FIR_16bit_fixed.map" --stack_size=0x200 --warn_sections -i"/Applications/ti/ccs1000/ccs/tools/compiler/ti-cgt-c2000_20.2.0.LTS/lib" -i"/Applications/ti/ccs1000/ccs/tools/compiler/ti-cgt-c2000_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --xml_link_info="FIR_16bit_fixed_linkInfo.xml" --rom_model -o "FIR_16bit_fixed.out" $(ORDERED_OBJS)
+	"/home/rodoortiz/ti/ccs930/ccs/tools/compiler/ti-cgt-c2000_18.12.4.LTS/bin/cl2000" -v28 -ml -mt --cla_support=cla1 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu2 --opt_for_speed=5 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=coffabi -z -m"FIR_16bit_fixed.map" --stack_size=0x200 --warn_sections -i"/home/rodoortiz/ti/ccs930/ccs/tools/compiler/ti-cgt-c2000_18.12.4.LTS/lib" -i"/home/rodoortiz/ti/ccs930/ccs/tools/compiler/ti-cgt-c2000_18.12.4.LTS/include" --reread_libs --diag_wrap=off --display_error_number --xml_link_info="FIR_16bit_fixed_linkInfo.xml" --rom_model -o "FIR_16bit_fixed.out" $(ORDERED_OBJS)
 	@echo 'Finished building target: "$@"'
 	@echo ' '
 
 FIR_16bit_fixed.hex: $(EXE_OUTPUTS)
 	@echo 'Building files: $(strip $(EXE_OUTPUTS__QUOTED))'
 	@echo 'Invoking: C2000 Hex Utility'
-	"/Applications/ti/ccs1000/ccs/tools/compiler/ti-cgt-c2000_20.2.0.LTS/bin/hex2000"  -o "FIR_16bit_fixed.hex" $(EXE_OUTPUTS__QUOTED)
+	"/home/rodoortiz/ti/ccs930/ccs/tools/compiler/ti-cgt-c2000_18.12.4.LTS/bin/hex2000"  -o "FIR_16bit_fixed.hex" $(EXE_OUTPUTS__QUOTED)
 	@echo 'Finished building: $(strip $(EXE_OUTPUTS__QUOTED))'
 	@echo ' '
 
